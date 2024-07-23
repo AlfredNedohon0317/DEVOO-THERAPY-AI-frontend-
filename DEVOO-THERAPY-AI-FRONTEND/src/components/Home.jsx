@@ -9,6 +9,9 @@ function Home() {
       <button className="signup-button">
         <Link to="/signup">Sign Up</Link>
       </button>
+      <button className="login-button">
+        <Link to="/login">Login</Link>
+      </button>
       <nav>
         <ul>
           <li><Link to="/community-chat">Community Chat</Link></li>
@@ -21,4 +24,3 @@ function Home() {
 }
 
 export default Home;
-

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Signup.css';
 
 function Signup() {
@@ -10,6 +11,7 @@ function Signup() {
     firstName: '',
     lastName: ''
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,6 +26,7 @@ function Signup() {
     axios.post(`${import.meta.env.VITE_API_URL}/signup/`, formData)
       .then(response => {
         console.log('User signed up:', response.data);
+        navigate('/'); // Navigate to home page after successful signup
       })
       .catch(error => {
         console.error('Error signing up:', error);
@@ -41,9 +44,9 @@ function Signup() {
           name="username"
           value={formData.username}
           onChange={handleChange}
-          autoComplete="username"
           required
         />
+
         <label htmlFor="password">Password:</label>
         <input
           type="password"
@@ -51,9 +54,9 @@ function Signup() {
           name="password"
           value={formData.password}
           onChange={handleChange}
-          autoComplete="current-password"
           required
         />
+
         <label htmlFor="email">Email:</label>
         <input
           type="email"
@@ -61,9 +64,9 @@ function Signup() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          autoComplete="email"
           required
         />
+
         <label htmlFor="firstName">First Name:</label>
         <input
           type="text"
@@ -71,9 +74,9 @@ function Signup() {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          autoComplete="given-name"
           required
         />
+
         <label htmlFor="lastName">Last Name:</label>
         <input
           type="text"
@@ -81,9 +84,9 @@ function Signup() {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
-          autoComplete="family-name"
           required
         />
+
         <button type="submit">Sign Up</button>
       </form>
     </div>
@@ -91,4 +94,3 @@ function Signup() {
 }
 
 export default Signup;
-
