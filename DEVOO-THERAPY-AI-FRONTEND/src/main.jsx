@@ -1,13 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Routes from './components/Routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import AppRoutes from "./components/Routes"; // Ensure this path is correct
+import "./index.css";
 
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement);
-
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <Routes />
-  </React.StrictMode>
+    <AppRoutes />
+  </React.StrictMode>,
+  document.getElementById('root')
 );

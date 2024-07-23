@@ -1,0 +1,33 @@
+.signup {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .signup h2 {
+    color: #333;
+  }
+  
+  .signup form {
+    display: inline-block;
+    text-align: left;
+  }
+  
+  .signup label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .signup input {
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .signup button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
