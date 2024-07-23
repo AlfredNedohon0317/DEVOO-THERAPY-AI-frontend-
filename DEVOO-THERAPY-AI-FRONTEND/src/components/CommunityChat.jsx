@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import './CommunityChat.css';  // Importing the CSS file specific to the CommunityChat component
 
 function CommunityChat() {
   const [messages, setMessages] = useState([]);

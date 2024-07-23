@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import './Exercises.css';  // Importing the CSS file specific to the Exercises component
 
 function Exercises() {
   const [exercises, setExercises] = useState([]);
@@ -25,3 +26,5 @@ function Exercises() {
 }
 
 export default Exercises;
+
+

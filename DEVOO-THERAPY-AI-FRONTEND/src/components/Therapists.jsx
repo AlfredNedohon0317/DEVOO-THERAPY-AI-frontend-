@@ -1,5 +1,6 @@
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import './Therapists.css';  // Importing the CSS file specific to the Therapists component
 
 function Therapists() {
   const [therapists, setTherapists] = useState([]);
@@ -25,3 +26,5 @@ function Therapists() {
 }
 
 export default Therapists;
+
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css';  // Importing the CSS file specific to the Home component
 
 function Home() {
   return (
@@ -9,4 +10,3 @@ function Home() {
 }
 
 export default Home;
-
