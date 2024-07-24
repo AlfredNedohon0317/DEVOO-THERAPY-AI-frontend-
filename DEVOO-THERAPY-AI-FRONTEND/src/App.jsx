@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css';
-import AppRoutes from './components/Routes'; // Assuming your Routes.jsx is in components folder
+import AppRoutes from './components/Routes'; 
 
 function App() {
   return (
