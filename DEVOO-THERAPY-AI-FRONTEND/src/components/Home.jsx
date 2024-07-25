@@ -20,6 +20,7 @@ function Home() {
           <li><Link to="/community-chat">Community Chat</Link></li>
           <li><Link to="/therapists">Therapists</Link></li>
           <li><Link to="/exercises">Exercises</Link></li>
+          <li><Link to="/account">Manage Account</Link></li> {/* New link to Account Management */}
         </ul>
       </nav>
     </div>

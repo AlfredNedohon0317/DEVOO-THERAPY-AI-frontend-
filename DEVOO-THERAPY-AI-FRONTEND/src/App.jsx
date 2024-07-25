@@ -8,7 +8,8 @@ import Login from './components/Login';
 import CommunityChat from './components/CommunityChat';
 import Exercises from './components/Exercises';
 import Therapists from './components/Therapists';
-import ChatInterface from './components/ChatInterface'; // Ensure this import is correct
+import ChatInterface from './components/ChatInterface'; 
+import AccountManagement from './components/AccountManagement';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/exercises" element={<Exercises />} />
         <Route path="/therapists" element={<Therapists />} />
         <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
+        <Route path="/account" element={<AccountManagement />} />
       </Routes>
     </Router>
   );
