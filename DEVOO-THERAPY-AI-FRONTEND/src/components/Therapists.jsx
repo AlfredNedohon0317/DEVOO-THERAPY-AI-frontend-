@@ -1,6 +1,8 @@
+// Therapists.jsx
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import axios from 'axios';
-import './Therapists.css';  // Importing the CSS file specific to the Therapists component
+import './Therapists.css';
 
 function Therapists() {
   const [therapists, setTherapists] = useState([]);
@@ -21,10 +23,12 @@ function Therapists() {
           <li key={therapist.id}>{therapist.name} - {therapist.specialty}</li>
         ))}
       </ul>
+      <button>
+        <Link to="/">Home</Link>
+      </button>
     </div>
   );
 }
 
 export default Therapists;
-
 

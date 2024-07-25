@@ -1,4 +1,6 @@
+// CommunityChat.jsx
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom'; // Import Link
 import axios from "axios";
 import Picker from '@emoji-mart/react';
 import data from '@emoji-mart/data';
@@ -11,12 +13,10 @@ function CommunityChat() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
-    // Fetch messages from backend
     axios.get(`${import.meta.env.VITE_API_URL}/community_messages/`)
       .then(response => setMessages(response.data))
       .catch(error => console.error('Error fetching messages:', error));
-    
-    // Check if the user is authenticated
+
     const token = localStorage.getItem('token');
     if (token) {
       setIsAuthenticated(true);
@@ -30,7 +30,7 @@ function CommunityChat() {
       return;
     }
 
-    const token = localStorage.getItem('token'); // or wherever you store the auth token
+    const token = localStorage.getItem('token');
     axios.post(`${import.meta.env.VITE_API_URL}/community_messages/`, 
       { message: newMessage },
       { headers: { Authorization: `Token ${token}` } }
@@ -67,9 +67,11 @@ function CommunityChat() {
         {showEmojiPicker && <Picker data={data} onEmojiSelect={addEmoji} />}
         <button type="submit">Send</button>
       </form>
+      <button>
+        <Link to="/">Home</Link>
+      </button>
     </div>
   );
 }
 
 export default CommunityChat;
-
