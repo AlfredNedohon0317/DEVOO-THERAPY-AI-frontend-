@@ -12,6 +12,9 @@ function Home() {
       <button className="login-button">
         <Link to="/login">Login</Link>
       </button>
+      <button className="chat-button">
+        <Link to="/chat">Chat with AI</Link>
+      </button>
       <nav>
         <ul>
           <li><Link to="/community-chat">Community Chat</Link></li>

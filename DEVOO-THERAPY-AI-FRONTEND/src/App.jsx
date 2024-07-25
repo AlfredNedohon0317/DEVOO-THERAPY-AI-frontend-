@@ -1,25 +1,27 @@
+// src/App.jsx
+
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import './App.css';
-import AppRoutes from './components/Routes'; 
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './components/Home';
+import Signup from './components/Signup';
+import Login from './components/Login';
+import CommunityChat from './components/CommunityChat';
+import Exercises from './components/Exercises';
+import Therapists from './components/Therapists';
+import ChatInterface from './components/ChatInterface'; // Ensure this import is correct
 
 function App() {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/therapists">Therapists</Link></li>
-            <li><Link to="/exercises">Exercises</Link></li>
-            <li><Link to="/community-chat">Community Chat</Link></li>
-            <li><Link to="/signup">Sign Up</Link></li>
-            <li><Link to="/login">Login</Link></li>
-          </ul>
-        </nav>
-        
-        <AppRoutes />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/community-chat" element={<CommunityChat />} />
+        <Route path="/exercises" element={<Exercises />} />
+        <Route path="/therapists" element={<Therapists />} />
+        <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
+      </Routes>
     </Router>
   );
 }

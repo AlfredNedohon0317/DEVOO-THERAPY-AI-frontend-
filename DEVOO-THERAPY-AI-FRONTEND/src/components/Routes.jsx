@@ -5,6 +5,7 @@ import Exercises from './Exercises';
 import CommunityChat from './CommunityChat';
 import Signup from './Signup';
 import Login from './Login';
+import ChatInterface from './ChatInterface'; 
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
         <Route path="/community-chat" element={<CommunityChat />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
       </Routes>
     </Router>
   );
