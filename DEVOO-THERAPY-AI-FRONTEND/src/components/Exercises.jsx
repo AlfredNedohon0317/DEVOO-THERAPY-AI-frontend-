@@ -1,4 +1,3 @@
-// Exercises.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -14,7 +13,7 @@ function Exercises() {
   }, []);
 
   const fetchExercises = () => {
-    axios.get(`${import.meta.env.VITE_API_URL}/exercises`)
+    axios.get(`${import.meta.env.VITE_API_URL}/exercises/`)
       .then(response => {
         setExercises(response.data);
       })
@@ -66,15 +65,28 @@ function Exercises() {
     <div>
       <h1>Exercises</h1>
       <ul>
-        {exercises.map(exercise => (
-          <li key={exercise.id}>
-            {exercise.title}
-            <button onClick={() => handleEditClick(exercise)}>Edit</button>
-            <button onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
-          </li>
-        ))}
+      {exercises.map(exercise => (
+    <li key={exercise.id}>
+        <h3>{exercise.title}</h3>
+        <p>Description: {exercise.description}</p>
+        <p>
+            Video URL: 
+            <a href={exercise.video_url} target="_blank" rel="noopener noreferrer">
+                {exercise.video_url}
+            </a>
+        </p>
+        <p>
+            Website: 
+            <a href={exercise.website_url} target="_blank" rel="noopener noreferrer">
+                {exercise.website_url}
+            </a>
+        </p>
+        <button onClick={() => handleEditClick(exercise)}>Edit</button>
+        <button onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
+    </li>
+))}
       </ul>
-      
+
       <h2>{editingExercise ? 'Edit Exercise' : 'Create Exercise'}</h2>
       <form onSubmit={editingExercise ? handleUpdateExercise : handleCreateExercise}>
         <input
@@ -117,4 +129,3 @@ function Exercises() {
 }
 
 export default Exercises;
-

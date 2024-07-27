@@ -3,28 +3,18 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
-  return (
-    <div className="home">
-      <h1>Welcome to DEVOO THERAPY AI</h1>
-      <button className="signup-button">
-        <Link to="/signup">Sign Up</Link>
-      </button>
-      <button className="login-button">
-        <Link to="/login">Login</Link>
-      </button>
-      <button className="chat-button">
-        <Link to="/chat">Chat with AI</Link>
-      </button>
-      <nav>
-        <ul>
-          <li><Link to="/community-chat">Community Chat</Link></li>
-          <li><Link to="/therapists">Therapists</Link></li>
-          <li><Link to="/exercises">Exercises</Link></li>
-          <li><Link to="/account">Manage Account</Link></li> {/* New link to Account Management */}
-        </ul>
-      </nav>
-    </div>
-  );
+    return (
+        <div className="container">
+            <h1 className="main-heading">Welcome to DEVOO Therapy</h1>
+            <p>Your journey towards mental wellness starts here. Explore exercises, chat with DEVOO, and connect with therapists.</p>
+            <div className="button-group">
+                <Link to="/chat"><button>Chat with DEVOO</button></Link>
+                <Link to="/therapists"><button>Find a Therapist</button></Link>
+                <Link to="/exercises"><button>Explore Exercises</button></Link>
+            </div>
+        </div>
+    );
 }
 
 export default Home;
+
