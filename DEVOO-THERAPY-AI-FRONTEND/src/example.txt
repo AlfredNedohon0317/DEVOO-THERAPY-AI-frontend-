@@ -1,0 +1,1 @@
+<img src="/devoo_therapy_ai_logo.jpeg" alt="DEVOO Therapy AI Logo" className="logo" />

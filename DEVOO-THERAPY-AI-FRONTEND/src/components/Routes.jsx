@@ -16,8 +16,8 @@ function AppRoutes() {
         <Route path="/exercises" element={<Exercises />} />
         <Route path="/community-chat" element={<CommunityChat />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
         <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
