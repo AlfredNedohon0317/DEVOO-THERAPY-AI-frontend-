@@ -5,7 +5,7 @@ import './Exercises.css';
 
 function Exercises() {
   const [exercises, setExercises] = useState([]);
-  const [newExercise, setNewExercise] = useState({ title: '', description: '', video_url: '', website: '' });
+  const [newExercise, setNewExercise] = useState({ title: '', description: '', video_url: '', website_url: '' });
   const [editingExercise, setEditingExercise] = useState(null);
 
   useEffect(() => {
@@ -34,7 +34,7 @@ function Exercises() {
     axios.post(`${import.meta.env.VITE_API_URL}/exercises/`, newExercise)
       .then(response => {
         setExercises([...exercises, response.data]);
-        setNewExercise({ title: '', description: '', video_url: '', website: '' });
+        setNewExercise({ title: '', description: '', video_url: '', website_url: '' });
       })
       .catch(error => console.error('Error creating exercise:', error));
   };
@@ -65,26 +65,26 @@ function Exercises() {
     <div>
       <h1>Exercises</h1>
       <ul>
-      {exercises.map(exercise => (
-    <li key={exercise.id}>
-        <h3>{exercise.title}</h3>
-        <p>Description: {exercise.description}</p>
-        <p>
-            Video URL: 
-            <a href={exercise.video_url} target="_blank" rel="noopener noreferrer">
+        {exercises.map(exercise => (
+          <li key={exercise.id}>
+            <h3>{exercise.title}</h3>
+            <p>Description: {exercise.description}</p>
+            <p>
+              Video URL: 
+              <a href={exercise.video_url} target="_blank" rel="noopener noreferrer">
                 {exercise.video_url}
-            </a>
-        </p>
-        <p>
-            Website: 
-            <a href={exercise.website_url} target="_blank" rel="noopener noreferrer">
+              </a>
+            </p>
+            <p>
+              Website: 
+              <a href={exercise.website_url} target="_blank" rel="noopener noreferrer">
                 {exercise.website_url}
-            </a>
-        </p>
-        <button onClick={() => handleEditClick(exercise)}>Edit</button>
-        <button onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
-    </li>
-))}
+              </a>
+            </p>
+            <button onClick={() => handleEditClick(exercise)}>Edit</button>
+            <button onClick={() => handleDeleteExercise(exercise.id)}>Delete</button>
+          </li>
+        ))}
       </ul>
 
       <h2>{editingExercise ? 'Edit Exercise' : 'Create Exercise'}</h2>
@@ -113,10 +113,10 @@ function Exercises() {
         />
         <input
           type="url"
-          name="website"
-          value={editingExercise ? editingExercise.website : newExercise.website}
+          name="website_url"
+          value={editingExercise ? editingExercise.website_url : newExercise.website_url}
           onChange={handleInputChange}
-          placeholder="Website"
+          placeholder="Website URL"
         />
         <button type="submit">{editingExercise ? 'Update' : 'Create'}</button>
       </form>
