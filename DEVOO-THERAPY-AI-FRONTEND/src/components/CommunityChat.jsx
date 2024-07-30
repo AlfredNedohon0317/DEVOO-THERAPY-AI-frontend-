@@ -49,6 +49,9 @@ function CommunityChat() {
 
   return (
     <div className="community-chat">
+      <Link to="/">
+        <button className="home-button">Home</button>
+      </Link>
       <h2>Community Chat</h2>
       <div className="messages">
         {messages.map((msg, index) => (
@@ -64,15 +67,15 @@ function CommunityChat() {
           placeholder="Type your message..."
           required
         />
-        <button type="button" onClick={() => setShowEmojiPicker(!showEmojiPicker)}>😊</button>
+        <div className="button-group">
+          <button type="button" onClick={() => setShowEmojiPicker(!showEmojiPicker)}>😊</button>
+          <button type="submit">Send</button>
+        </div>
         {showEmojiPicker && <Picker data={data} onEmojiSelect={addEmoji} />}
-        <button type="submit">Send</button>
       </form>
-      <button>
-        <Link to="/">Home</Link>
-      </button>
     </div>
   );
 }
 
 export default CommunityChat;
+
