@@ -6,10 +6,18 @@ import logo from '../assets/image-1.png'; // Adjust the path to your logo
 function Home() {
     return (
         <div className="container">
+            <div className="top-buttons">
+                <Link to="/login">
+                    <button>Login</button>
+                </Link>
+                <Link to="/signup">
+                    <button>Sign up</button>
+                </Link>
+            </div>
             <img src={logo} alt="DEVOO Therapy Logo" className="logo" width={400} />
             <h1 className="main-heading">Welcome to DEVOO Therapy</h1>
             <p>Your journey towards mental wellness starts here. Explore exercises, chat with DEVOO, and connect with therapists.</p>
-            <div className="button-group">
+            <div className="button-row">
                 <Link to="/chat">
                     <button>Chat with DEVOO</button>
                 </Link>
@@ -19,8 +27,8 @@ function Home() {
                 <Link to="/exercises">
                     <button>Explore Exercises</button>
                 </Link>
-                <Link to="/login">
-                    <button>Login</button>
+                <Link to="/communitychat">
+                    <button>Community Chat</button>
                 </Link>
             </div>
         </div>
@@ -28,5 +36,6 @@ function Home() {
 }
 
 export default Home;
+
 
 

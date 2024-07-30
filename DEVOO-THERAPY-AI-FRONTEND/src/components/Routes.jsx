@@ -14,7 +14,7 @@ function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/therapists" element={<Therapists />} />
         <Route path="/exercises" element={<Exercises />} />
-        <Route path="/community-chat" element={<CommunityChat />} />
+        <Route path="/communitychat" element={<CommunityChat />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
         <Route path="/login" element={<Login />} />
@@ -22,6 +22,7 @@ function AppRoutes() {
     </Router>
   );
 }
+
 
 export default AppRoutes;
 

@@ -18,10 +18,10 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/community-chat" element={<CommunityChat />} />
+        <Route path="/communitychat" element={<CommunityChat />} /> {/* CommunityChat route */}
         <Route path="/exercises" element={<Exercises />} />
         <Route path="/therapists" element={<Therapists />} />
-        <Route path="/chat" element={<ChatInterface />} /> {/* Chat route */}
+        <Route path="/chat" element={<ChatInterface />} />
         <Route path="/account" element={<AccountManagement />} />
       </Routes>
     </Router>
@@ -29,3 +29,4 @@ function App() {
 }
 
 export default App;
+

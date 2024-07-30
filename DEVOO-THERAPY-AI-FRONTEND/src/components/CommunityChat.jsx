@@ -1,4 +1,3 @@
-// CommunityChat.jsx
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom'; // Import Link
 import axios from "axios";
@@ -13,10 +12,12 @@ function CommunityChat() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   useEffect(() => {
+    // Fetch messages from backend
     axios.get(`${import.meta.env.VITE_API_URL}/community_messages/`)
       .then(response => setMessages(response.data))
       .catch(error => console.error('Error fetching messages:', error));
 
+    // Check if the user is authenticated
     const token = localStorage.getItem('token');
     if (token) {
       setIsAuthenticated(true);
