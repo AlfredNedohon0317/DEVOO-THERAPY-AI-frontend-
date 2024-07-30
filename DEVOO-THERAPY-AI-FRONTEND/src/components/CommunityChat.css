@@ -33,7 +33,7 @@ li {
   box-sizing: border-box;
   width: 100%;
   max-width: 800px; /* Set a maximum width for better readability */
-  height: 300px; /* Set a fixed height for the messages area */
+  height: 450px; /* Set a fixed height for the messages area */
   border: 1px solid #ccc; /* Optional border for better visibility */
   border-radius: 5px;
 }
@@ -45,9 +45,8 @@ word-wrap: break-word; /* Ensure long words break to the next line */
 
 textarea {
 width: 100%;
-margin-bottom: 10px;
-padding: 10px;
-box-sizing: border-box;
+margin-bottom: 1px;
+padding: 1px;
 }
 
 button {

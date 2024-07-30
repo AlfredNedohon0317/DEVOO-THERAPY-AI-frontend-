@@ -1,4 +1,4 @@
-// Therapists.jsx
+//therapist.jsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -65,7 +65,6 @@ function Therapists() {
   return (
     <div>
       <h1>Therapists</h1>
-      // Therapists.jsx
 <ul>
   {therapists.map(therapist => (
     <li key={therapist.id}>
@@ -136,3 +135,4 @@ function Therapists() {
 }
 
 export default Therapists;
+ 

@@ -73,7 +73,7 @@ function CommunityChat() {
         </div>
         {showEmojiPicker && <Picker data={data} onEmojiSelect={addEmoji} />}
       </form>
-    </div>
+    </div> 
   );
 }
 
