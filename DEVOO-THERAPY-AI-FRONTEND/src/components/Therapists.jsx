@@ -65,6 +65,7 @@ function Therapists() {
   return (
     <div>
       <h1>Therapists</h1>
+    
 <ul>
   {therapists.map(therapist => (
     <li key={therapist.id}>
@@ -99,7 +100,7 @@ function Therapists() {
           type="text"
           name="specialty"
           value={editingTherapist ? editingTherapist.specialty : newTherapist.specialty}
-          onChange={handleInputChange}
+          onChange={handleInputChange} 
           placeholder="Specialty"
           required
         />
@@ -126,13 +127,16 @@ function Therapists() {
         />
         <button type="submit">{editingTherapist ? 'Update' : 'Create'}</button>
       </form>
+  
 
-      <button>
+   
+      <button class="home-button-container" >
         <Link to="/">Home</Link>
-      </button>
-    </div>
+      </button >
+   </div>
+   
   );
-}
 
+}
 export default Therapists;
- 
+  

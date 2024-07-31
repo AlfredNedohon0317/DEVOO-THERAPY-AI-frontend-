@@ -158,8 +158,8 @@ button:hover {
 }
 
 .messages-container {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: black;
+  border: 5px solid black;
   border-radius: 5px;
   padding: 20px; /* Increase padding for better spacing */
   max-height: 500px; /* Increase max height */
@@ -175,7 +175,7 @@ button:hover {
 }
 
 .message.user {
-  background-color: #e6f7ff;
+  background-color: #3f98c2;
   align-self: flex-end;
 }
 
@@ -191,7 +191,7 @@ button:hover {
 input[type="text"] {
   flex: 1;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid black;
   border-radius: 5px;
   margin-right: 10px;
   font-size: 1.1em; /* Adjust font size for input */
